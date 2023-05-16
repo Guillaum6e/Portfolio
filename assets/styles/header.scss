@@ -1,0 +1,80 @@
+@font-face {
+    font-family: FranchiseRegular;
+    src: url(../fonts/FranchiseRegular.ttf);
+}
+
+@font-face {
+    font-family: FranchiseFilledRegular;
+    src: url(../fonts/FranchiseFilledRegular.ttf);
+}
+
+// Century Gothic & Rockwell
+
+header {
+    background: url(../images/palmTree.jpg) no-repeat center;
+    font-family: FranchiseRegular;
+    color: white;
+    box-shadow: inset 8vw 8vw 15vw black, inset -8vw -8vw 15vw black;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 5vw;
+    animation: flickerinGlow 3s infinite alternate;
+    animation-delay: 2s;
+
+    #myName {
+        display: flex;
+        font-size: 10vh;
+
+        #firstname {
+            margin-right: 50px;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    #job {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 2vw;
+
+        span {
+            width: 12vw;
+        }
+    }
+}
+
+@keyframes flickerinGlow {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #8800ff8f,
+            0 0 80px #8800ff8f,
+            0 0 90px #8800ff8f,
+            0 0 100px #8800ff8f,
+            0 0 150px #8800ff8f;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
