@@ -10,6 +10,10 @@
 
 // Century Gothic & Rockwell
 
+h1 {
+    height: 200vh;
+}
+
 header {
     background: url(../images/palmTree.jpg) no-repeat center;
     font-family: FranchiseRegular;
@@ -23,6 +27,7 @@ header {
     padding: 5vw;
     animation: flickerinGlow 3s infinite alternate;
     animation-delay: 2s;
+    transition: transform 0.70s ease-out;
 
     #myName {
         display: flex;
@@ -76,5 +81,15 @@ header {
     24%,
     55% {
         text-shadow: none;
+    }
+}
+
+@keyframes hide {
+    from {
+        top: 0vh;
+    }
+
+    to {
+        top: -100vh;
     }
 }

@@ -11,6 +11,10 @@
     {{ encore_entry_link_tags('header') }}
 {% endblock %}
 
+{% block javascripts %}
+    {{ encore_entry_script_tags('headerjs') }}
+{% endblock %}
+
 {% block body %}
 
     {% include 'components/header.html.twig' %}
