@@ -57,39 +57,66 @@ header {
     }
 }
 
-@keyframes flickerinGlow {
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
 
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-        text-shadow:
-            0 0 4px #fff,
-            0 0 11px #fff,
-            0 0 19px #fff,
-            0 0 40px #8800ff8f,
-            0 0 80px #8800ff8f,
-            0 0 90px #8800ff8f,
-            0 0 100px #8800ff8f,
-            0 0 150px #8800ff8f;
+        #myName {
+            font-size: 9.5vw;
+
+            span {
+                display: inline;
+                //     transition: transform 5s;
+
+                //     &:hover {
+                //         transform: rotateX(90deg);
+                //         color: black;
+                //     }
+                // }
+            }
+
+            #job {
+                writing-mode: horizontal-tb;
+                align-items: center;
+                flex-direction: row;
+                margin: 0;
+                font-size: 6.5vw;
+                gap: 0px 1vw;
+
+                span {
+                    width: auto;
+                }
+            }
+        }
     }
 
-    20%,
-    24%,
-    55% {
-        text-shadow: none;
-    }
-}
+    @keyframes flickerinGlow {
 
-@keyframes hide {
-    from {
-        top: 0vh;
-    }
+        0%,
+        18%,
+        22%,
+        25%,
+        53%,
+        57%,
+        100% {
+            text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #8800ff8f,
+                0 0 80px #8800ff8f,
+                0 0 90px #8800ff8f,
+                0 0 100px #8800ff8f,
+                0 0 150px #8800ff8f;
+        }
 
-    to {
-        top: -100vh;
+        20%,
+        24%,
+        55% {
+            text-shadow: none;
+        }
     }
 }
